@@ -91,6 +91,7 @@ class _CalculatorState extends State<Calculator> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.lightGreen[900],
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -135,124 +136,122 @@ class _CalculatorState extends State<Calculator> {
 
             Expanded(
               flex: 4,
-              child: Container(
-                child: Column(
-                  children: [
-                    Row(
-                      children: [
-                        CustomButtom(
-                          onClick: () => buttonPressed('AC'),
-                          text: 'AC',
-                          color: Colors.grey[600],
-                        ),
-                        CustomButtom(
-                          onClick: () => buttonPressed('()'),
-                          text: '()',
-                          color: Colors.lightGreen[500],
-                        ),
-                        CustomButtom(
-                          onClick: () => buttonPressed('%'),
-                          text: '%',
-                          color: Colors.lightGreen[500],
-                        ),
-                        CustomButtom(
-                          onClick: () => buttonPressed('/'),
-                          text: '/',
-                          color: Colors.lightGreen[500],
-                        ),
-                      ],
-                    ),
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      CustomButtom(
+                        onClick: () => buttonPressed('AC'),
+                        text: 'AC',
+                        color: Colors.grey[600],
+                      ),
+                      CustomButtom(
+                        onClick: () => buttonPressed('()'),
+                        text: '()',
+                        color: Colors.lightGreen[500],
+                      ),
+                      CustomButtom(
+                        onClick: () => buttonPressed('%'),
+                        text: '%',
+                        color: Colors.lightGreen[500],
+                      ),
+                      CustomButtom(
+                        onClick: () => buttonPressed('/'),
+                        text: '/',
+                        color: Colors.lightGreen[500],
+                      ),
+                    ],
+                  ),
 
-                    Row(
-                      children: [
-                        CustomButtom(
-                          onClick: () => buttonPressed('7'),
-                          text: '7',
-                        ),
-                        CustomButtom(
-                          onClick: () => buttonPressed('8'),
-                          text: '8',
-                        ),
-                        CustomButtom(
-                          onClick: () => buttonPressed('9'),
-                          text: '9',
-                        ),
-                        CustomButtom(
-                          onClick: () => buttonPressed('*'),
-                          text: '*',
-                          color: Colors.lightGreen[500],
-                        ),
-                      ],
-                    ),
+                  Row(
+                    children: [
+                      CustomButtom(
+                        onClick: () => buttonPressed('7'),
+                        text: '7',
+                      ),
+                      CustomButtom(
+                        onClick: () => buttonPressed('8'),
+                        text: '8',
+                      ),
+                      CustomButtom(
+                        onClick: () => buttonPressed('9'),
+                        text: '9',
+                      ),
+                      CustomButtom(
+                        onClick: () => buttonPressed('*'),
+                        text: '*',
+                        color: Colors.lightGreen[500],
+                      ),
+                    ],
+                  ),
 
-                    Row(
-                      children: [
-                        CustomButtom(
-                          onClick: () => buttonPressed('4'),
-                          text: '4',
-                        ),
-                        CustomButtom(
-                          onClick: () => buttonPressed('5'),
-                          text: '5',
-                        ),
-                        CustomButtom(
-                          onClick: () => buttonPressed('6'),
-                          text: '6',
-                        ),
-                        CustomButtom(
-                          onClick: () => buttonPressed('-'),
-                          text: '-',
-                          color: Colors.lightGreen[500],
-                        ),
-                      ],
-                    ),
+                  Row(
+                    children: [
+                      CustomButtom(
+                        onClick: () => buttonPressed('4'),
+                        text: '4',
+                      ),
+                      CustomButtom(
+                        onClick: () => buttonPressed('5'),
+                        text: '5',
+                      ),
+                      CustomButtom(
+                        onClick: () => buttonPressed('6'),
+                        text: '6',
+                      ),
+                      CustomButtom(
+                        onClick: () => buttonPressed('-'),
+                        text: '-',
+                        color: Colors.lightGreen[500],
+                      ),
+                    ],
+                  ),
 
-                    Row(
-                      children: [
-                        CustomButtom(
-                          onClick: () => buttonPressed('1'),
-                          text: '1',
-                        ),
-                        CustomButtom(
-                          onClick: () => buttonPressed('2'),
-                          text: '2',
-                        ),
-                        CustomButtom(
-                          onClick: () => buttonPressed('3'),
-                          text: '3',
-                        ),
-                        CustomButtom(
-                          onClick: () => buttonPressed('+'),
-                          text: '+',
-                          color: Colors.lightGreen[500],
-                        ),
-                      ],
-                    ),
+                  Row(
+                    children: [
+                      CustomButtom(
+                        onClick: () => buttonPressed('1'),
+                        text: '1',
+                      ),
+                      CustomButtom(
+                        onClick: () => buttonPressed('2'),
+                        text: '2',
+                      ),
+                      CustomButtom(
+                        onClick: () => buttonPressed('3'),
+                        text: '3',
+                      ),
+                      CustomButtom(
+                        onClick: () => buttonPressed('+'),
+                        text: '+',
+                        color: Colors.lightGreen[500],
+                      ),
+                    ],
+                  ),
 
-                    Row(
-                      children: [
-                        CustomButtom(
-                          onClick: () => buttonPressed('0'),
-                          text: '0',
-                        ),
-                        CustomButtom(
-                          onClick: () => buttonPressed('.'),
-                          text: '.',
-                        ),
-                        CustomButtom(
-                          onClick: () => buttonPressed('DEL'),
-                          text: 'DEL',
-                          color: Colors.red[900],
-                        ),
-                        CustomButtom(
-                          onClick: () => buttonPressed('='),
-                          text: '=',
-                          color: Colors.grey[600],
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+                  Row(
+                    children: [
+                      CustomButtom(
+                        onClick: () => buttonPressed('0'),
+                        text: '0',
+                      ),
+                      CustomButtom(
+                        onClick: () => buttonPressed('.'),
+                        text: '.',
+                      ),
+                      CustomButtom(
+                        onClick: () => buttonPressed('DEL'),
+                        text: 'DEL',
+                        color: Colors.red[900],
+                      ),
+                      CustomButtom(
+                        onClick: () => buttonPressed('='),
+                        text: '=',
+                        color: Colors.grey[600],
+                      ),
+                    ],
+                  ),
+                ],
               ),
             ),
           ],

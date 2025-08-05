@@ -16,7 +16,7 @@ class _CalculatorState extends State<Calculator> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Expanded(
-            flex: 3,
+            flex: 2,
             child: Container(
               decoration: BoxDecoration(
                 color: Colors.lightGreen[800],
@@ -28,7 +28,7 @@ class _CalculatorState extends State<Calculator> {
             ),
           ),
           Expanded(
-            flex: 4,
+            flex: 3,
             child: Column(
               children: [
                 Row(
@@ -36,7 +36,7 @@ class _CalculatorState extends State<Calculator> {
                     CustomButtom(
                       onClick: () => {},
                       text: 'AC',
-                      color: Colors.lightGreen[500],
+                      color: Colors.grey[600],
                     ),
                     CustomButtom(
                       onClick: () => {},
@@ -56,40 +56,61 @@ class _CalculatorState extends State<Calculator> {
                     ),
                   ],
                 ),
+
                 Row(
                   children: [
-                    CustomButtom(onClick: () => {}, text: 'AC'),
-                    CustomButtom(onClick: () => {}, text: '()'),
+                    CustomButtom(onClick: () => {}, text: '7'),
+                    CustomButtom(onClick: () => {}, text: '8'),
 
-                    CustomButtom(onClick: () => {}, text: '%'),
-                    CustomButtom(onClick: () => {}, text: '/'),
+                    CustomButtom(onClick: () => {}, text: '9'),
+                    CustomButtom(
+                      onClick: () => {},
+                      text: '*',
+                      color: Colors.lightGreen[500],
+                    ),
                   ],
                 ),
                 Row(
                   children: [
-                    CustomButtom(onClick: () => {}, text: 'AC'),
-                    CustomButtom(onClick: () => {}, text: '()'),
+                    CustomButtom(onClick: () => {}, text: '4'),
+                    CustomButtom(onClick: () => {}, text: '5'),
 
-                    CustomButtom(onClick: () => {}, text: '%'),
-                    CustomButtom(onClick: () => {}, text: '/'),
+                    CustomButtom(onClick: () => {}, text: '6'),
+                    CustomButtom(
+                      onClick: () => {},
+                      text: '-',
+                      color: Colors.lightGreen[500],
+                    ),
                   ],
                 ),
                 Row(
                   children: [
-                    CustomButtom(onClick: () => {}, text: 'AC'),
-                    CustomButtom(onClick: () => {}, text: '()'),
+                    CustomButtom(onClick: () => {}, text: '1'),
+                    CustomButtom(onClick: () => {}, text: '2'),
 
-                    CustomButtom(onClick: () => {}, text: '%'),
-                    CustomButtom(onClick: () => {}, text: '/'),
+                    CustomButtom(onClick: () => {}, text: '3'),
+                    CustomButtom(
+                      onClick: () => {},
+                      text: '+',
+                      color: Colors.lightGreen[500],
+                    ),
                   ],
                 ),
                 Row(
                   children: [
-                    CustomButtom(onClick: () => {}, text: 'AC'),
-                    CustomButtom(onClick: () => {}, text: '()'),
+                    CustomButtom(onClick: () => {}, text: '0'),
+                    CustomButtom(onClick: () => {}, text: '.'),
 
-                    CustomButtom(onClick: () => {}, text: '%'),
-                    CustomButtom(onClick: () => {}, text: '/'),
+                    CustomButtom(
+                      onClick: () => {},
+                      text: 'DEL',
+                      color: Colors.red[900],
+                    ),
+                    CustomButtom(
+                      onClick: () => {},
+                      text: '=',
+                      color: Colors.grey[600],
+                    ),
                   ],
                 ),
               ],

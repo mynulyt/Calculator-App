@@ -16,7 +16,7 @@ class _CalculatorState extends State<Calculator> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Expanded(
-            flex: 1,
+            flex: 3,
             child: Container(
               decoration: BoxDecoration(
                 color: Colors.lightGreen[800],
@@ -28,15 +28,70 @@ class _CalculatorState extends State<Calculator> {
             ),
           ),
           Expanded(
-            flex: 2,
-            child: Row(
+            flex: 4,
+            child: Column(
               children: [
-                CustomButtom(onClick: () => {}, text: '9'),
-                CustomButtom(onClick: () => {}, text: '9'),
+                Row(
+                  children: [
+                    CustomButtom(
+                      onClick: () => {},
+                      text: 'AC',
+                      color: Colors.lightGreen[500],
+                    ),
+                    CustomButtom(
+                      onClick: () => {},
+                      text: '()',
+                      color: Colors.lightGreen[500],
+                    ),
 
-                CustomButtom(onClick: () => {}, text: '9'),
-                CustomButtom(onClick: () => {}, text: '9'),
-                CustomButtom(onClick: () => {}, text: '9'),
+                    CustomButtom(
+                      onClick: () => {},
+                      text: '%',
+                      color: Colors.lightGreen[500],
+                    ),
+                    CustomButtom(
+                      onClick: () => {},
+                      text: '/',
+                      color: Colors.lightGreen[500],
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    CustomButtom(onClick: () => {}, text: 'AC'),
+                    CustomButtom(onClick: () => {}, text: '()'),
+
+                    CustomButtom(onClick: () => {}, text: '%'),
+                    CustomButtom(onClick: () => {}, text: '/'),
+                  ],
+                ),
+                Row(
+                  children: [
+                    CustomButtom(onClick: () => {}, text: 'AC'),
+                    CustomButtom(onClick: () => {}, text: '()'),
+
+                    CustomButtom(onClick: () => {}, text: '%'),
+                    CustomButtom(onClick: () => {}, text: '/'),
+                  ],
+                ),
+                Row(
+                  children: [
+                    CustomButtom(onClick: () => {}, text: 'AC'),
+                    CustomButtom(onClick: () => {}, text: '()'),
+
+                    CustomButtom(onClick: () => {}, text: '%'),
+                    CustomButtom(onClick: () => {}, text: '/'),
+                  ],
+                ),
+                Row(
+                  children: [
+                    CustomButtom(onClick: () => {}, text: 'AC'),
+                    CustomButtom(onClick: () => {}, text: '()'),
+
+                    CustomButtom(onClick: () => {}, text: '%'),
+                    CustomButtom(onClick: () => {}, text: '/'),
+                  ],
+                ),
               ],
             ),
           ),

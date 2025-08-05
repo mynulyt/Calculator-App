@@ -9,25 +9,22 @@ class Calculator extends StatefulWidget {
 }
 
 class _CalculatorState extends State<Calculator> {
-  String _input = '0'; // Current input display
-  String _output = '0'; // Result display
-  String _operation = ''; // Current operation (+, -, *, /, etc.)
-  double _num1 = 0; // First number in calculation
-  double _num2 = 0; // Second number in calculation
-  bool _shouldResetInput = false; // Flag to reset input after operation
+  String _input = '0';
+  String _output = '0';
+  String _operation = '';
+  double _num1 = 0;
+  double _num2 = 0;
+  bool _shouldResetInput = false;
 
-  // Handles button presses
   void buttonPressed(String buttonText) {
     setState(() {
       if (buttonText == 'AC') {
-        // Clear everything
         _input = '0';
         _output = '0';
         _operation = '';
         _num1 = 0;
         _num2 = 0;
       } else if (buttonText == 'DEL') {
-        // Delete last character
         if (_input.length > 1) {
           _input = _input.substring(0, _input.length - 1);
         } else {
@@ -38,12 +35,10 @@ class _CalculatorState extends State<Calculator> {
           buttonText == '*' ||
           buttonText == '/' ||
           buttonText == '%') {
-        // Handle operations
         _num1 = double.parse(_input);
         _operation = buttonText;
         _shouldResetInput = true;
       } else if (buttonText == '=') {
-        // Calculate result
         _num2 = double.parse(_input);
 
         switch (_operation) {
@@ -64,7 +59,6 @@ class _CalculatorState extends State<Calculator> {
             break;
         }
 
-        // Remove decimal if it's .0
         if (_output.endsWith('.0')) {
           _output = _output.substring(0, _output.length - 2);
         }
@@ -72,13 +66,10 @@ class _CalculatorState extends State<Calculator> {
         _input = _output;
         _operation = '';
       } else if (buttonText == '.') {
-        // Handle decimal point
         if (!_input.contains('.')) {
           _input += '.';
         }
       } else if (buttonText == '()') {
-        // Handle parentheses (placeholder - could be implemented for complex expressions)
-        // For now, just toggle between adding opening and closing parentheses
         if (_input == '0') {
           _input = '(';
         } else if (!_input.contains('(')) {
@@ -87,7 +78,6 @@ class _CalculatorState extends State<Calculator> {
           _input += ')';
         }
       } else {
-        // Handle number input
         if (_input == '0' || _shouldResetInput) {
           _input = buttonText;
           _shouldResetInput = false;
@@ -105,9 +95,8 @@ class _CalculatorState extends State<Calculator> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // Display area
             Expanded(
-              flex: 2,
+              flex: 3,
               child: Container(
                 width: double.infinity,
                 decoration: BoxDecoration(
@@ -122,7 +111,6 @@ class _CalculatorState extends State<Calculator> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
-                    // Operation display (smaller text)
                     Text(
                       _num1 != 0 ? '$_num1 $_operation' : '',
                       style: TextStyle(
@@ -131,7 +119,6 @@ class _CalculatorState extends State<Calculator> {
                       ),
                     ),
                     const SizedBox(height: 10),
-                    // Main display (larger text)
                     Text(
                       _input,
                       style: const TextStyle(
@@ -146,14 +133,11 @@ class _CalculatorState extends State<Calculator> {
               ),
             ),
 
-            // Button area
             Expanded(
-              flex: 3,
+              flex: 4,
               child: Container(
-                color: Colors.grey[200],
                 child: Column(
                   children: [
-                    // First row (AC, (), %, /)
                     Row(
                       children: [
                         CustomButtom(
@@ -179,7 +163,6 @@ class _CalculatorState extends State<Calculator> {
                       ],
                     ),
 
-                    // Second row (7, 8, 9, *)
                     Row(
                       children: [
                         CustomButtom(
@@ -202,7 +185,6 @@ class _CalculatorState extends State<Calculator> {
                       ],
                     ),
 
-                    // Third row (4, 5, 6, -)
                     Row(
                       children: [
                         CustomButtom(
@@ -225,7 +207,6 @@ class _CalculatorState extends State<Calculator> {
                       ],
                     ),
 
-                    // Fourth row (1, 2, 3, +)
                     Row(
                       children: [
                         CustomButtom(
@@ -248,7 +229,6 @@ class _CalculatorState extends State<Calculator> {
                       ],
                     ),
 
-                    // Fifth row (0, ., DEL, =)
                     Row(
                       children: [
                         CustomButtom(

@@ -16,9 +16,10 @@ class _CalculatorState extends State<Calculator> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Expanded(
+            flex: 1,
             child: Container(
               decoration: BoxDecoration(
-                color: Colors.green,
+                color: Colors.lightGreen[800],
                 borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(20),
                   bottomRight: Radius.circular(20),
@@ -26,7 +27,17 @@ class _CalculatorState extends State<Calculator> {
               ),
             ),
           ),
-          Row(children: [CustomButtom(), CustomButtom(), CustomButtom()]),
+          Expanded(
+            flex: 2,
+            child: Row(
+              children: [
+                CustomButtom(),
+                CustomButtom(),
+                CustomButtom(),
+                CustomButtom(),
+              ],
+            ),
+          ),
         ],
       ),
     );

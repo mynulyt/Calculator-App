@@ -31,10 +31,12 @@ class _CalculatorState extends State<Calculator> {
             flex: 2,
             child: Row(
               children: [
-                CustomButtom(),
-                CustomButtom(),
-                CustomButtom(),
-                CustomButtom(),
+                CustomButtom(onClick: () => {}, text: '9'),
+                CustomButtom(onClick: () => {}, text: '9'),
+
+                CustomButtom(onClick: () => {}, text: '9'),
+                CustomButtom(onClick: () => {}, text: '9'),
+                CustomButtom(onClick: () => {}, text: '9'),
               ],
             ),
           ),

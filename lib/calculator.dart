@@ -33,11 +33,17 @@ class _CalculatorState extends State<Calculator> {
       } else if (buttonText == '+' ||
           buttonText == '-' ||
           buttonText == '*' ||
-          buttonText == '/' ||
-          buttonText == '%') {
+          buttonText == '/') {
         _num1 = double.parse(_input);
         _operation = buttonText;
         _shouldResetInput = true;
+      } else if (buttonText == '%') {
+        // Percentage operation - divide current number by 100
+        double value = double.parse(_input) / 100;
+        _input = value.toString();
+        if (_input.endsWith('.0')) {
+          _input = _input.substring(0, _input.length - 2);
+        }
       } else if (buttonText == '=') {
         _num2 = double.parse(_input);
 
@@ -53,9 +59,6 @@ class _CalculatorState extends State<Calculator> {
             break;
           case '/':
             _output = (_num1 / _num2).toString();
-            break;
-          case '%':
-            _output = (_num1 % _num2).toString();
             break;
         }
 
